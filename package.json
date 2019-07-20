@@ -1,0 +1,36 @@
+{
+  "name": "Gulp-Tasks",
+  "version": "1.2.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "7.1.4",
+    "browser-sync": "2.18.13",
+    "del": "3.0.0",
+    "event-stream": "3.3.4",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "3.8.0",
+    "gulp-compile-handlebars": "0.6.1",
+    "gulp-data": "1.2.1",
+    "gulp-if": "2.0.2",
+    "gulp-md5-plus": "1.0.3",
+    "gulp-notify": "3.0.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "7.0.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sort": "2.0.0",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp.spritesmith": "6.5.1",
+    "postcss-url": "7.1.2",
+    "run-sequence": "2.1.0"
+  }
+}

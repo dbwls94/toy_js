@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 추가</title>
+    <style>
+        #add-btn {
+            padding: 5px 10px;
+            border:0;
+            background:#f80;
+            color:white;
+            border-radius:5px;
+        }
+        ul {
+            padding:0;
+            list-style-position:inside;
+        }
+        li {
+            border-bottom:1px solid #999;
+            padding:5px 0;
+            cursor:pointer;
+        }
+        .active {
+            background:#abc;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="title">제목</h3>-->
+    <button id="add-btn" type="button">목록 추가</button>
+    <ul id="list">
+        <li>제목 1</li>
+    </ul>
+    <script>
+        let num = prompt('구구단 숫자를 입력하세요');
+
+        if(num == '' || isNaN(num)) {
+        	alert('올바른 숫자를 입력하세요');
+        }
+        else if(num<1 || num>9) {
+        	alert('1~9까지의 숫자로 입력하세요');
+        }
+        else {
+        	for(let i = 1; i<10; i++) {
+        		document.write(num + ' * ' + i + ' = ' + num*i + '<br>');
+        	}
+        }
+
+        let num1 = Number(prompt('첫번째 숫자 입력'));
+        let num2 = Number(prompt('두번째 숫자 입력'));
+    
+        document.write(num1 + ' + ' + num2 + ' = ' + (num1+num2))
+
+        let title = document.getElementById('title');
+        let btn = document.getElementById('add-btn');
+        let list = document.getElementById('list');
+        let li = list.getElementsByTagName('li');
+
+        // 목록추가 버튼 누르면 목록 받는 prompt 뜨고 list에 추가되도록
+        btn.addEventListener('click', function(){
+        	let txt = prompt('할 일을 입력하세요');
+        	list.innerHTML += ('<li>'+txt+'</li>');
+        });
+
+        // 리스트 클릭하면 title에 제목 뜨도록, active 클래스 들어가도록
+        let activeItem = function(){
+        	title.innerHTML = event.target.innerText;
+
+        	for(let i=0; i<this.children.length; i++) {
+        		this.children[i].removeAttribute('class');
+        	}
+        	event.target.setAttribute('class', 'active');
+        };
+        list.addEventListener('click', activeItem);
+    </script>
+</body>
+</html>
