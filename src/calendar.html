@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>달력</title>
+    <style>
+        #calendar_wrap{ 
+        background: #333;
+        width: 350px;
+        text-align: center;
+        }
+        caption{ 
+        font-size: 1.5em;
+        color: orange; padding: 10px;
+        }
+        table,th,td{
+        color: white;
+        border: 1px solid #666;
+        border-collapse: collapse;
+        }
+        th,td{ width: 30px; padding: 10px;}
+        th:first-child, td:first-child{ color: red;}	
+        #prev, #next{
+            display: inline-block;
+            text-decoration: none;
+            color: white; padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calendar_wrap">
+        <table id="calendar">
+          <caption>
+            <span class="year"></span>년 
+            <span class="month"></span>월 
+          </caption>
+          <tr>
+            <th>일</th><th>월</th><th>화</th><th>수</th>
+            <th>목</th><th>금</th><th>토</th>
+          </tr>
+          <tr>
+            <td>&nbsp;</td><td>&nbsp;</td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+            <td>&nbsp;</td><td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+    
+        <a href="#" id="prev">이전달</a>
+        <a href="#" id="next">다음달</a>
+    </div> 
+
+    <script src="js/calendar.js"></script>
+</body>
+</html>
